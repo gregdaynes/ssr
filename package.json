@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Figuring out how ssr works",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/index.js | pino-pretty",
+    "start": "nodemon src/server.js | pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gregory Daynes <gregaynes@gmail.com>",
