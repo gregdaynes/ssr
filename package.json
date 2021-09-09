@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Figuring out how ssr works",
   "type": "module",
-  "main": "src/server.js",
+  "main": "src/server.mjs",
   "scripts": {
-    "start": "nodemon src/server.js | pino-pretty",
+    "start": "nodemon src/server.mjs | pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gregory Daynes <gregaynes@gmail.com>",
@@ -16,6 +16,7 @@
     "nodemon": "^2.0.12",
     "pino-pretty": "^7.0.0",
     "vue": "^2.6.14",
+    "vue-router": "^3.5.2",
     "vue-server-renderer": "^2.6.14"
   }
 }

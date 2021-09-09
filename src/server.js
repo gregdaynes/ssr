@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import { createRenderer } from "vue-server-renderer";
 import { join } from "desm";
 import fs from "node:fs/promises";
-import createApp from "./entry-server.js";
+import createApp from "./entry-server.mjs";
 
 const renderer = createRenderer({
   template: await fs
@@ -22,7 +22,7 @@ fastify.get("/*", async (req, reply) => {
     `,
     url: req.url,
   };
-  const app = createApp(context);
+  const app = await createApp(context);
 
   try {
     const html = await renderer.renderToString(app, context);
