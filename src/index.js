@@ -6,7 +6,7 @@ import fs from "node:fs/promises";
 
 const renderer = createRenderer({
   template: await fs
-    .readFile("index.template.html")
+    .readFile(join(import.meta.url, "index.template.html"))
     .then((buf) => buf.toString()),
 });
 
