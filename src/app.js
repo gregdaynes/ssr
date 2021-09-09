@@ -1,10 +1,10 @@
 import Vue from "vue";
+import App from "./App.vue";
 
-export default function createApp(context) {
-  return new Vue({
-    data: {
-      url: context.url,
-    },
-    template: `<div>The visited URL is: {{ url }}</div>`,
+export function createApp() {
+  const app = new Vue({
+    render: (h) => h(app),
   });
+
+  return { app };
 }

@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import { createRenderer } from "vue-server-renderer";
 import { join } from "desm";
 import fs from "node:fs/promises";
-import createApp from "./app.js";
+import createApp from "./entry-server.js";
 
 const renderer = createRenderer({
   template: await fs
